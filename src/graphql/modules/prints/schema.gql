@@ -1,0 +1,20 @@
+type Print {
+    _id: ID
+    title: String
+}
+
+input PrintInput {
+    title: String
+}
+
+type Query {
+  print: String
+}
+
+type Mutation {
+    createPrint(data: PrintInput): Print
+}
+
+type Subscription {
+    printAdded: Print
+}
